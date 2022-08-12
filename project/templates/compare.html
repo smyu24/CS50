@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+    Compare
+{% endblock %}
+
+{% block main %}
+    <form action="/compare" method="post">
+        <fieldset>
+             <img src = "{{ image }}" alt = "imageplaceholder"/> <h3>Yours is the Non-dotted line</h3>
+<!---
+-Discrete distribution as horizontal bar chart (https://matplotlib.org/stable/gallery/lines_bars_and_markers/horizontal_barchart_distribution.html)
+-Scatter masked (https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_masked.html)
+-Filling the area between lines (https://matplotlib.org/stable/gallery/lines_bars_and_markers/fill_between_demo.html#sphx-glr-gallery-lines-bars-and-markers-fill-between-demo-py)
+-Broken Barh (https://matplotlib.org/stable/gallery/lines_bars_and_markers/broken_barh.html)
+-EventCollection Demo (https://matplotlib.org/stable/gallery/lines_bars_and_markers/eventcollection_demo.html)
+-CSD Demo (https://matplotlib.org/stable/gallery/lines_bars_and_markers/csd_demo.html)
+-Plotting the coherence of two signals (https://matplotlib.org/stable/gallery/lines_bars_and_markers/cohere.html)
+-Plotting categorical variables (https://matplotlib.org/stable/gallery/lines_bars_and_markers/categorical_variables.html)
+-->
+        </fieldset>
+    </form>
+{% endblock %}

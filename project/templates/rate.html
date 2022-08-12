@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}
+    Rate
+{% endblock %}
+{% block main %}
+
+    <form action="/rate" method="post">
+        <div class="container">
+
+          <p><strong>Rate our website:</strong></p>
+          <div class="txt-center">
+            <form>
+                <div class="rating">
+                    <input id="star5" name="star" type="radio" value="1" class="radio-btn hide" />
+                    <label for="star5">☆</label>
+                    <input id="star4" name="star" type="radio" value="2" class="radio-btn hide" />
+                    <label for="star4">☆☆</label>
+                    <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+                    <label for="star3">☆☆☆</label>
+                    <input id="star2" name="star" type="radio" value="4" class="radio-btn hide" />
+                    <label for="star2">☆☆☆☆</label>
+                    <input id="star1" name="star" type="radio" value="5" class="radio-btn hide" />
+                    <label for="star1">☆☆☆☆☆</label>
+                </div>
+            </form>
+        </div>
+            <div class="form-group">
+              <label for="comment">Comment:</label>
+              <textarea class="form-control" rows="1" id="comment" name="comment"></textarea>
+            <div class="form-check">
+          <label class="form-check-label" for="post">
+            <input type="checkbox" class="form-check-input" id="post" name="anonymous?" value="something" checked> Post Anonymously?
+          </label>
+
+            </div>
+        </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Post</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Name:</th>
+                <th>Star Rating:</th>
+                <th>Comment:</th>
+                <th>Time of Post:</th>
+            </tr>
+            {% for username in data %}
+            <tr>
+                <td>{{ data[loop.index - 1]["username"] }}</td>
+                <td>{{ data[loop.index - 1]["rating"] }} x ☆ </td>
+                <td>{{ data[loop.index - 1]["comment"]}}</td>
+                <td>Posted on {{ data[loop.index - 1]["time"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

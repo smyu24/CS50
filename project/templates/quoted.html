@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+{% block title %}
+    Quoted Sleep
+{% endblock %}
+
+{% block main %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<h3>Overall Level of Sleep: {% if healthy == unhealthy %}Moderate{% endif %}{% if healthy > unhealthy %}Healthy{% endif %}{% if healthy < unhealthy %}Unhealthy{% endif %}</h3>
+<small>Healthy: {{ healthy }}</small>   <small>Unhealthy: {{ unhealthy }}</small>
+<table>
+  <tr>
+    <th>Days</th>
+    <th>Amount of Sleep</th>
+    <th>Healthy Level</th>
+  </tr>
+  <tr>
+    <td>Day1</td>
+    <td>{{ data[0]["day1"] }}</td>
+    <td>{{ healthy_lvl[0] }}</td>
+  </tr>
+  <tr>
+    <td>Day2</td>
+    <td>{{ data[0]["day2"] }}</td>
+    <td>{{ healthy_lvl[1] }}</td>
+  </tr>
+  <tr>
+    <td>Day3</td>
+    <td>{{ data[0]["day3"] }}</td>
+    <td>{{ healthy_lvl[2] }}</td>
+  </tr>
+  <tr>
+    <td>Day4</td>
+    <td>{{ data[0]["day4"] }}</td>
+    <td>{{ healthy_lvl[3] }}</td>
+  </tr>
+  <tr>
+    <td>Day5</td>
+    <td>{{ data[0]["day5"] }}</td>
+    <td>{{ healthy_lvl[4] }}</td>
+  </tr>
+  <tr>
+    <td>Day6</td>
+    <td>{{ data[0]["day6"] }}</td>
+    <td>{{ healthy_lvl[5] }}</td>
+  </tr>
+  <tr>
+    <td>Day7</td>
+    <td>{{ data[0]["day7"] }}</td>
+    <td>{{ healthy_lvl[6] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day8</b></i></td>
+    <td>{{ data[1]["day1"] }}</td>
+    <td>{{ healthy_lvl[7] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day9</b></i></td>
+    <td>{{ data[1]["day2"] }}</td>
+    <td>{{ healthy_lvl[8] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day10</b></i></td>
+    <td>{{ data[1]["day3"] }}</td>
+    <td>{{ healthy_lvl[9] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day11</b></i></td>
+    <td>{{ data[1]["day4"] }}</td>
+    <td>{{healthy_lvl[10] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day12</b></i></td>
+    <td>{{ data[1]["day5"] }}</td>
+    <td>{{ healthy_lvl[11] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day13</b></i></td>
+    <td>{{ data[1]["day6"] }}</td>
+    <td>{{ healthy_lvl[12] }}</td>
+  </tr>
+  <tr>
+    <td><i><b>Day14</b></i></td>
+    <td>{{ data[1]["day7"] }}</td>
+    <td>{{ healthy_lvl[13] }}</td>
+  </tr>
+    <tr>
+    <td>Day15</td>
+    <td>{{ data[2]["day1"] }}</td>
+    <td>{{ healthy_lvl[14] }}</td>
+  </tr>
+  <tr>
+    <td>Day16</td>
+    <td>{{ data[2]["day2"] }}</td>
+    <td>{{ healthy_lvl[15] }}</td>
+  </tr>
+  <tr>
+    <td>Day17</td>
+    <td>{{ data[2]["day3"] }}</td>
+    <td>{{ healthy_lvl[16] }}</td>
+  </tr>
+  <tr>
+    <td>Day18</td>
+    <td>{{ data[2]["day4"] }}</td>
+    <td>{{ healthy_lvl[17] }}</td>
+  </tr>
+  <tr>
+    <td>Day19</td>
+    <td>{{ data[2]["day5"] }}</td>
+    <td>{{ healthy_lvl[18] }}</td>
+  </tr>
+  <tr>
+    <td>Day20</td>
+    <td>{{ data[2]["day6"] }}</td>
+    <td>{{ healthy_lvl[19] }}</td>
+  </tr>
+  <tr>
+    <td>Day21</td>
+    <td>{{ data[2]["day7"] }}</td>
+    <td>{{ healthy_lvl[20] }}</td>
+  </tr>
+</table>
+
+    <div class="container">
+            <img src="{{ image }}" width="700" height="600"/>
+    </div><caption>AGE: {{ age }}</caption>
+
+    <br>
+    <br>
+    <br>
+    <h5>Advice:</h5>
+    {% if healthy == unhealthy %}<h9>Your Sleep time is Moderate, so you might want to sleep more</h9>{% endif %}
+    {% if healthy > unhealthy %}<h9>Your Sleep time is Healthy, so keep up the good work and don't change a thing!</h9>{% endif %}
+    {% if healthy < unhealthy %}<h9>Your Sleep time is Unhealthy, so take a look at these sites and see if it can help you sleep more</h9><br>
+        <ul>
+          <li><a href="https://www.healthline.com/health/sleep/sleep-calculator" target="_blank">Visit Healthline!</a></li><!--Courtesy of Healthline.com -->
+          <li><a href="https://thesleepdoctor.com/how-to-sleep-better/sleep-calculator/" target="_blank">Visit TheSleepDoctor!</a></li><!--Courtesy of TheSleepDoctor -->
+          <li><a href="https://www.sleepfoundation.org/sleep-hygiene/how-is-sleep-quality-calculated" target="_blank">Visit Sleepfoundation!</a></li><!--Courtesy of Sleepfoundation -->
+        </ul>{% endif %}
+{% endblock %}

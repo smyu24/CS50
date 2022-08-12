@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+    Settings
+{% endblock %}
+{% block main %}
+    <div class="container">
+        <tr>Change Password: <tr>
+        <form action="/settings" method="post">
+            <input autocomplete="off" autofocus class="form-control" name="old_password" placeholder="Enter OLD password" type="text"/>
+            <input autocomplete="off" autofocus class="form-control" name="new_password" placeholder="Enter NEW password" type="text"/>
+            <div class="form-group">
+                <br><button class="btn btn-default" type="submit">Save</button>
+            </div>
+        </form>
+        <table style="width:100%" class="table" id="settings">
+            <caption>User Signed In: <b>{{ table_users[0]["username"] }}</b></caption>
+            <tr>
+                <th>Current Username</th>
+                <th>Current Password</th>
+                <th>Email Address</th>
+            </tr>
+            <tr>
+                <td>{{ table_users[0]["username"] }}</td>
+                <td>{{ table_users[0]["hash"] }}</td>
+                <td>{{ table_users[0]["email"] }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

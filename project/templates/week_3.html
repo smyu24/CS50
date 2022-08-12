@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block title %}
+Week Three
+{% endblock %}
+
+{% block main %}
+<h2>Week 3</h2><br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%">90%</div>
+          </div><br>
+          <form action="/week3" method="post">
+          <fieldset>
+            <div class="container">
+              <h2>Monday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day1" placeholder="Input Sleep For Monday" type="number" min="0" max="24">
+              </div>
+
+              <h2>Tuesday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day2" placeholder="Input Sleep For Tuseday" type="number" min="0" max="24">
+
+            </div>
+
+            <h2>Wednesday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day3" placeholder="Input Sleep For Wednesday" type="number" min="0" max="24">
+
+            </div>
+
+            <h2>Thursday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day4" placeholder="Input Sleep For Thursday" type="number" min="0" max="24">
+
+            </div>
+
+            <h2>Friday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day5" placeholder="Input Sleep For Friday" type="number" min="0" max="24">
+            </div>
+            <h2>Saturday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day6" placeholder="Input Sleep For Saturday" type="number" min="0" max="24">
+            </div>
+            <h2>Sunday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day7" placeholder="Input Sleep For Sunday" type="number" min="0" max="24">
+            </div>
+                <div align="left">
+              <form>
+              <select name="age">
+                <option disabled selected value="">Pick Your Age</option>
+                <option value="Birth to 3 months">Birth to 3 months</option>
+                <option value="4 to 11 months">4 to 11 months</option>
+                <option value="1 to 2 years">1 to 2 years</option>
+                <option value="3 to 5 years">3 to 5 years</option>
+                <option value="6 to 12 years">6 to 12 years</option>
+                <option value="13 to 18 years">13 to 18 years</option>
+                <option value="18 to 64 years">18 to 64 years</option>
+                <option value="65 years and older">65 years and older</option>
+              </select>
+              </form>
+              </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Get Quote</button>
+            </div>
+            </fieldset>
+            </form>
+{% endblock %}

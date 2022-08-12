@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block title %}
+Week One
+{% endblock %}
+
+{% block main %}
+<h2>Week 1</h2><br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:10%">10%</div>
+          </div><br>
+          <form action="/week1" method="post">
+          <fieldset>
+            <div class="container">
+              <h2>Monday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day1" placeholder="Input Sleep For Monday" type="number" min="0" max="24">
+              </div>
+
+              <h2>Tuesday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day2" placeholder="Input Sleep For Tuseday" type="number" min="0" max="24">
+
+            </div>
+
+            <h2>Wednesday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day3" placeholder="Input Sleep For Wednesday" type="number" min="0" max="24">
+
+            </div>
+
+            <h2>Thursday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day4" placeholder="Input Sleep For Thursday" type="number" min="0" max="24">
+
+            </div>
+
+            <h2>Friday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day5" placeholder="Input Sleep For Friday" type="number" min="0" max="24">
+            </div>
+            <h2>Saturday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day6" placeholder="Input Sleep For Saturday" type="number" min="0" max="24">
+            </div>
+            <h2>Sunday</h2>
+              <div class="card card-body form-group"><input autocomplete="off" autofocus class="form-control" name="day7" placeholder="Input Sleep For Sunday" type="number" min="0" max="24">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Get Quote</button>
+            </div>
+            </div>
+            </fieldset>
+          </form>
+
+{% endblock %}

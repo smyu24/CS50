@@ -1,0 +1,248 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Links
+{% endblock %}
+
+{% block main %}
+    <p>Sleep is an essential part of living and plays an important role in our overall health. It allows the body and mind to recharge, resulting in a person felling refreshed and alert
+    when they wake up. Getting a healthy amount of sleep also helps the body remain healthy and stave off diseases and illnesses. Without sufficient sleep,
+    the brain cannot function properly.</p>
+    <br>
+
+  <div class="container">
+    <h2>Responsive Tables Using LI <small>Triggers on 767px</small></h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Job Id</div>
+        <div class="col col-2">Customer Name</div>
+        <div class="col col-3">Amount Due</div>
+        <div class="col col-4">Payment Status</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42235</div>
+        <div class="col col-2" data-label="Customer Name">John Doe</div>
+        <div class="col col-3" data-label="Amount">$350</div>
+        <div class="col col-4" data-label="Payment Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42442</div>
+        <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+        <div class="col col-3" data-label="Amount">$220</div>
+        <div class="col col-4" data-label="Payment Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42257</div>
+        <div class="col col-2" data-label="Customer Name">John Smith</div>
+        <div class="col col-3" data-label="Amount">$341</div>
+        <div class="col col-4" data-label="Payment Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42311</div>
+        <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+        <div class="col col-3" data-label="Amount">$115</div>
+        <div class="col col-4" data-label="Payment Status">Pending</div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+    <table style="width:100%" BORDER="5" CELLPADDING="4" CELLSPACING="3">
+    <tr>
+      <th COLSPAN="3">
+         <h2><br>Sleep guidelines</h2>
+      </th>
+    </tr>
+      <th>Infant Column</th>
+      <th>Adolescent Column</th>
+      <th>Adult Column</th>
+      <tr>
+        <td>Birth to 3 months: 14 to 17 hours</td>
+        <td>3 to 5 years: 10 to 13 hours</td>
+        <td>18 to 64 years: 7 to 9 hours</td>
+      </tr>
+      <tr>
+        <td>4 to 11 months: 12 to 16 hours</td>
+        <td>6 to 12 years: 9 to 12 hours</td>
+        <td>65 years and older: 7 to 8 hours</td>
+      </tr>
+      <tr>
+        <td>1 to 2 years: 11 to 14 hours</td>
+        <td>13 to 18 years: 8 to 10 hours</td>
+        <td></td>
+      </tr>
+    </table><br>
+
+      <h3>Helpful Tips To Help You Fall Asleep</h3><small><a href="https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379" target="_blank">Source: Mayo Clinic</a></small>
+      <ol>
+        <li>Stick to a sleep schedule. Set aside no more than eight hours for sleep</li>
+        <li>Pay attention to what you eat and drink. Don't go to bed hungry or stuffed</li>
+        <li>Create a restful environment. Create a room that's ideal for sleeping</li>
+        <li>Limit daytime naps</li>
+        <li>Include physical activity in your daily routine</li>
+        <li>Manage worries</li>
+        <li>Increase bright light exposure during the day</li>
+        <li>Reduce blue light exposure in the evening</li>
+        <li>Don't consume caffeine late in the day</li>
+        <li>Reduce irregular or long daytime naps</li>
+        <li>Try to sleep and wake at consistent times</li>
+        <li>Take a melatonin supplement</li>
+      </ol>
+      <br>
+      <dl>
+        <dt>Bedtime is based on:</dt>
+        <dd>- your wake-up time</dd>
+        <dd>- completing five or six 90-minute sleep cycles</dd>
+        <dd>- allowing 15 minutes to fall asleep</dd>
+        <dd>Good Luck</dd>
+      </dl>
+        <br>
+    <h3>Helpful Links</h3><br>
+        <ul>
+          <li><a href="https://www.healthline.com/health/sleep/sleep-calculator" target="_blank">Visit Healthline!</a></li><!--Courtesy of Healthline.com -->
+          <li><a href="https://thesleepdoctor.com/how-to-sleep-better/sleep-calculator/" target="_blank">Visit TheSleepDoctor!</a></li><!--Courtesy of TheSleepDoctor -->
+          <li><a href="https://www.sleepfoundation.org/sleep-hygiene/how-is-sleep-quality-calculated" target="_blank">Visit Sleepfoundation!</a></li><!--Courtesy of Sleepfoundation -->
+        </ul>
+
+
+
+
+
+        <!---
+        <div class="container">
+  <h2>Responsive Tables Using LI <small>Triggers on 767px</small></h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Job Id</div>
+      <div class="col col-2">Customer Name</div>
+      <div class="col col-3">Amount Due</div>
+      <div class="col col-4">Payment Status</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Job Id">42235</div>
+      <div class="col col-2" data-label="Customer Name">John Doe</div>
+      <div class="col col-3" data-label="Amount">$350</div>
+      <div class="col col-4" data-label="Payment Status">Pending</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Job Id">42442</div>
+      <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+      <div class="col col-3" data-label="Amount">$220</div>
+      <div class="col col-4" data-label="Payment Status">Pending</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Job Id">42257</div>
+      <div class="col col-2" data-label="Customer Name">John Smith</div>
+      <div class="col col-3" data-label="Amount">$341</div>
+      <div class="col col-4" data-label="Payment Status">Pending</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Job Id">42311</div>
+      <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+      <div class="col col-3" data-label="Amount">$115</div>
+      <div class="col col-4" data-label="Payment Status">Pending</div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+        body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+
+    }
+    li {
+      display: block;
+    }
+    .col {
+
+      flex-basis: 100%;
+
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+        ---->
+
+
+
+
+
+
+
+{% endblock %}

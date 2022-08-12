@@ -1,0 +1,4 @@
+ask user for value of height
+if height is defined, check if given height is greater than or equal to one and less than or equal to 8 and is a positive integer
+    Use defined value as height
+else go back to line 1

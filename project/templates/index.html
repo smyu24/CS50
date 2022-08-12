@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<div class="container">
+
+
+    <table style="width:100%" class="table" id="index">
+        <caption>User Signed In: <b>{{ username }}</b></caption>
+        <tr>
+          <th><div class="container">
+            <h2>Quote</h2>
+            <div class="card">
+              <a href="week1" title="Quote" data-toggle="popover" data-trigger="hover" data-content="Get A Quote Of Your Sleep Level"><img src={{url_for('static', filename='Quote_Image.png')}} align="middle" alt="Quote_Preview" width="400" height="300"></a>
+            </div>
+          </th>
+          <th><div class="container">
+            <h2>Compare Data</h2>
+            <div class="card">
+              <a href="compare" title="Compare Data" data-toggle="popover" data-trigger="hover" data-content="Compare Your Sleep To Others"><img src={{url_for('static', filename='Compare_Preview.png')}} alt="Compare_Preview" width="400" height="300"></a>
+            </div></th>
+      </tr>
+      <tr>
+          <th><div class="container">
+            <h2>Links</h2>
+            <div class="card">
+              <a href="links" title=" Helpful Links" data-toggle="popover" data-trigger="hover" data-content="Helpful Links And Advice Here"><img src={{url_for('static', filename='Link.png')}} alt="Links_Preview" width="400" height="300"></a>
+            </div></th>
+          <th><div class="container">
+            <h2>Rate My Website</h2>
+          <div class="card">
+              <a href="rate" title="Rate" data-toggle="popover" data-trigger="hover" data-content="Rate Website Here"><img src={{url_for('static', filename='rate.png')}} alt="Rate_Preview" width="400" height="300"></a>
+            </div></th>
+      </tr>
+  <form>
+      <th>Time:</th>
+      <th>Help?</th>
+      <tr><td>Current Time: <a href="" title="Time" data-toggle="popover" data-trigger="hover" data-content="Your Current Time Via Server">{{ current_time }}</a></td><td><a href="mailto:smyu24@gmail.com">Send email</a></td></tr>
+  </form>
+  </table>
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+  });
+  </script>
+</div>
+{% endblock %}
